@@ -1,12 +1,7 @@
-/**
-	Tangyoon - Nautilus Cook
-**/
+// npc:   小乳牛
+// quest: 尋找新鮮的牛奶
 
 function start() {
-    cm.removeAll(4031847);
-    cm.removeAll(4031848);
-    cm.removeAll(4031849);
-    cm.gainItem(4031850, 1);
-    cm.warp(120000100, 0);
-    cm.dispose();
+  cm.sendOk('  哞~~~');
+  cm.dispose();
 }
