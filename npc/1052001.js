@@ -54,8 +54,12 @@ function action(mode, type, selection) {
 		    cm.sendNext("The progress you have made is astonishing.");
 		}
 	    } else if (cm.getQuestStatus(100100) == 1) {
-		cm.completeQuest(100101);
-		if (cm.getQuestStatus(100101) == 2) {
+		if(cm.haveItem(4031059)){
+           cm.completeQuest(100101);
+        }
+        if (cm.getQuestStatus(100101) == 2) {
+          cm.gainItem(4031059, -1);
+          cm.gainItem(4031057, 1);
 		    cm.sendOk("Alright, now take this to #bArec#k.");
 		} else {
 		    cm.sendOk("Hey, #b#h0##k! I need a #bBlack Charm#k. Go and find the Door of Dimension.");
