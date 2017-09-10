@@ -1,6 +1,6 @@
 /**
- * npc id: 9330117
- * npc name: 經驗值轉蛋機
+ * npc id:
+ * npc name: 轉蛋機
  *
  * author: freedom
  *
@@ -14,25 +14,9 @@ var status = -1;
 var items = {
   // 請務必確認機率加總是否為 1000
 
-  exp_100k: {
+  lottery: {
     // 機率，千分之 x
-    chance: 20,
-
-    // 數量，範圍是 1 ~ x
-    quantity: 1,
-
-    // 廣播名稱，null 為不廣播
-    broad: '經驗值轉蛋機',
-
-    // 物品
-    collection: [
-      2370000 // 兵法書(孫子)
-    ]
-  },
-
-  exp_50k: {
-    // 機率，千分之 x
-    chance: 40,
+    chance: 400,
 
     // 數量，範圍是 1 ~ x
     quantity: 1,
@@ -42,78 +26,24 @@ var items = {
 
     // 物品
     collection: [
-      2370001 // 兵法書(吳子)
+      4031365 // 楓葉彩票
     ]
   },
 
-  exp_30k: {
+  consolation: {
     // 機率，千分之 x
-    chance: 60,
+    chance: 600,
 
     // 數量，範圍是 1 ~ x
-    quantity: 1,
+    quantity: 20,
 
     // 廣播名稱，null 為不廣播
     broad: null,
 
     // 物品
     collection: [
-      2370002 // 兵法書(尉繚子)
-    ]
-  },
-
-  exp_20k: {
-    // 機率，千分之 x
-    chance: 80,
-
-    // 數量，範圍是 1 ~ x
-    quantity: 1,
-
-    // 廣播名稱，null 為不廣播
-    broad: null,
-
-    // 物品
-    collection: [
-      2370003 // 兵法書(六韜)
-    ]
-  },
-
-  exp_10k: {
-    // 機率，千分之 x
-    chance: 100,
-
-    // 數量，範圍是 1 ~ x
-    quantity: 1,
-
-    // 廣播名稱，null 為不廣播
-    broad: null,
-
-    // 物品
-    collection: [
-      2370004 // 兵法書(三略)
-    ]
-  },
-
-  exp: {
-    // 機率，千分之 x
-    chance: 700,
-
-    // 數量，範圍是 1 ~ x
-    quantity: 1,
-
-    // 廣播名稱，null 為不廣播
-    broad: null,
-
-    // 物品
-    collection: [
-      2370005, // 兵法書(司馬法）
-      2370006, // 兵法書(李衛公問對)
-      2370007, // 兵法書(孫兵兵法)
-      2370008, // 兵法書(兵法三十六計)
-      2370009, // 兵法書(兵法二十四章)
-      2370010, // 兵法書(戰國策)
-      2370011, // 兵法書(百戰奇略)
-      2370012  // 兵法書(心書)
+      2000004, // 特殊藥水
+      2000005  // 超級藥水
     ]
   }
 };
