@@ -1,189 +1,131 @@
+/*
+ * TMS 113 npc/9010000.js
+ *
+ * Copyright (C) 2017 ~ Present
+ *
+ * freedom <freedom@csie.io>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 /**
- -- Odin JavaScript --------------------------------------------------------------------------------
- Faito(Showa Exchange Quest) - Showa Town(801000300)
- -- By ---------------------------------------------------------------------------------------------
- Information
- -- Version Info -----------------------------------------------------------------------------------
- 1.0 - First Version by Information
- - Base from Sean360 script, thanks
- ---------------------------------------------------------------------------------------------------
- **/
+ * npc id: 9010000
+ * npc name: 楓之谷GM
+ */
 
 var status = -1;
-var eQuestChoices = new Array (1302064,1312032,1322054,1332055,1332056,1372034,1382039,1402039,1412027,1422029,1432040,1442051,
-  1452045,1462040,1472055,
-  1092045,1092046,1092047,
-  //頭盔開始
-  1002508,1002509,1002510,1002511
+var quantity = 0;
 
-);
+// 楓幣兌換楓葉點數匯率
+var mesoToMaplePointRate = 200000;
+// 楓葉兌換楓葉點數匯率
+var mapleLeafToMaplePointRate = 15;
+// 楓葉兌換祝福卷軸匯率
+var mapleLeafToWhiteScroll = 500;
 
-var eQuestPrizes = new Array();
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1,')
+}
 
-var requiredItemArr = new Array(
-  [1302020,4001126],
-  [1412011,4001126],
-  [1422014,4001126],
-  [1332025,4001126],
-  [1332025,4001126],
-  [1382009,4001126],
-  [1382012,4001126],
-  [1302020,4001126],
-  [1412011,4001126],
-  [1412014,4001126],
-  [1432012,4001126],
-  [1442024,4001126],
-  [1452022,4001126],
-  [1462019,4001126],
-  [1472030,4001126],
-  //盾牌開始
-  [1092030,4001126],
-  [1092030,4001126],
-  [1092030,4001126],
-  //頭盔開始
-  [4001126],
-  [4001126,1002508],
-  [4001126,1002509],
-  [4001126,1002510]
-);
-var requiredItemNumArr = new Array(
-  [1,2000],
-  [1,1500],
-  [1,1500],
-  [1,2000],
-  [1,2000],
-  [1,2000],
-  [1,1500],
-  [1,2000],
-  [1,1500],
-  [1,1500],
-  [1,2000],
-  [1,1500],
-  [1,2000],
-  [1,2000],
-  [1,2000],
-  //盾牌開始
-  [1,2000],
-  [1,2000],
-  [1,2000],
-  //楓葉頭盔
-  [100],
-  [200,1],
-  [300,1],
-  [400,1]
-);
-var requiredMoneyArr = new Array(50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000
-  //盾牌開始
-  ,500000,500000,500000
-  //頭盔開始
-  ,500,5000,50000,500000
-
-);
-var Allscroll = new Array(2040315,2040912,2043013,2043108,2043208,2043308,2043708,
-  2043808,2044008,2044108,2044208,2044308,2044408,2044508,2044608,2044708
-);
-
-var requiredItem  = 0;
-
-var requiredItemNum = 0;
-
-var lastSelection = -1;
-
-var remoney = 0;
-
-var reward;
-
-var itemSet;
-
+function endSession(msg) {
+  cm.sendOk(msg);
+  cm.safeDispose();
+}
 
 function action(mode, type, selection) {
-  if (status == 2 && mode != 1 ) {
-    cm.sendOk("好好慶祝吧!有問題歡迎隨時找我～");
+  if (1 === mode) {
+    status++;
+  } else {
+    if (0 === status) {
+      return endSession('有空隨時來看看呦！');
+    }
+
+    status--;
+  }
+
+  if (0 === status) {
+    var options = [
+      '#L0##b楓葉點數兌換（楓幣）#k',
+      '#L1##b楓葉點數兌換（楓葉）#k',
+      '#L2##b#t2340000#兌換（楓葉）#k'
+    ];
+
+    cm.sendSimple('請問需要什麼服務呢？\r\n' + options.join('\r\n'));
+  } else if (1 === status) {
+    var maxQuantity;
+
+    switch (selection) {
+      case 0:
+        maxQuantity = Math.floor((Math.pow(2, 31) - 1) / mesoToMaplePointRate);
+
+        cm.sendGetNumber('請輸入欲兌換的#b楓葉點數#k數量，目前匯率是 #r' + formatNumber(mesoToMaplePointRate) + '#k #b楓幣#k兌換 #r1#k 點#b楓葉點數#k：', 10, 1, maxQuantity);
+
+        break;
+      case 1:
+        maxQuantity = Math.floor((4 * 6 * 4 * 1000 /* 楓葉數量上線 */) / mapleLeafToMaplePointRate);
+
+        cm.sendGetNumber('請輸入欲兌換的#b楓葉點數#k數量，目前匯率是 #r' + formatNumber(mapleLeafToMaplePointRate) + '#k 個#b#t4001126##k兌換 #r1#k 點#b楓葉點數#k：', 10, 1, maxQuantity);
+
+        break;
+      case 2:
+        cm.sendGetNumber('請輸入欲兌換的 #v2340000# #b#t2340000##k 數量，目前匯率是 #r' + formatNumber(mapleLeafToWhiteScroll) + '#k 個#b#t4001126##k兌換 #r1#k 張#b#t2340000##k：', 1, 1, 100);
+
+        break;
+      default:
+        return endSession('發生了一點問題，請稍候再試。');
+    }
+
+    status = 10 + selection * 4;
+  } else if (11 === status) {
+    quantity = mesoToMaplePointRate * selection;
+
+    if (cm.getMeso() < quantity) {
+      cm.sendOk('兌換失敗，#b楓幣#k數量不足。');
+    } else {
+      cm.gainMeso(-quantity);
+      cm.gainMaplePoint(selection);
+      cm.sendOk('兌換成功！');
+    }
+
     cm.safeDispose();
-    return;
-  }
-  status++;
+  } else if (15 === status) {
+    quantity = mapleLeafToMaplePointRate * selection;
 
-  if (status == 0) {
-    var eQuestChoice = makeChoices(eQuestChoices);
-    cm.sendSimple(eQuestChoice);
-  } else if (status == 1){
-    if(selection == 23){
-      cm.sendYesNo("你確定要兌換#b週年慶卷軸#k嗎?\r\n需要#b#v4001126##t4001126#300個#k\r\n" );
-      status++;
-    }else{
-      requiredItem = requiredItemArr[selection];
-      requiredItemNum = requiredItemNumArr[selection];
-      reward = eQuestChoices[selection];
-      remoney = requiredMoneyArr[selection];
-      var eRequired = makeRequire(requiredItem,requiredItemNum,reward,remoney);
-      cm.sendSimple(eRequired);
+    if (!cm.haveItem(4001126, quantity)) {
+      cm.sendOk('兌換失敗，#b#t4001126##k數量不足。');
+    } else {
+      cm.gainItem(4001126, -quantity);
+      cm.gainMaplePoint(selection);
+      cm.sendOk('兌換成功！');
     }
-    lastSelection = selection;
-  }else if(status == 2){
-    cm.sendYesNo("你確定你要製作#b#v"+ reward + "##t" + reward +"##k嗎?\r\n" );
-  }else if(status == 3){
-    if(lastSelection == 23){
-      itemSet = (Math.floor(Math.random() * Allscroll.length));
-      reward = Allscroll[itemSet];
-      if(!cm.haveItem(4001126,300)){
-        cm.sendOk("你的楓葉不夠\r\n" );
-        cm.dispose();
-        return ;
-      }
-      if(!cm.canHold(reward)){
-        cm.sendOk("你的物品欄已經滿了！\r\n" );
-        cm.dispose();
-        return ;
-      }
-      cm.gainItem(4001126,-300);
-      cm.gainItem(reward,1);
-      cm.sendOk("希望您開心！\r\n" );
-      cm.dispose();
 
-    }else{
-      for(var i = 0 ; i < requiredItem.length ; i++){
-        if(!cm.haveItem(requiredItem[i],requiredItemNum[i])){
-          cm.sendOk("還沒收集完成嗎？\r\n" );
-          cm.dispose();
-          return ;
-        }
-      }
-      if(cm.getMeso() < remoney){
-        cm.sendOk("你的錢不夠！\r\n" );
-        cm.dispose();
-        return ;
-      }
-      if(!cm.canHold(reward)){
-        cm.sendOk("你的物品欄已經滿了！\r\n" );
-        cm.dispose();
-        return ;
-      }
-      cm.gainMeso(-remoney);
-      for(var i=0 ; i < requiredItem.length ; i++ ){
-        cm.gainItem(requiredItem[i] , -requiredItemNum[i]);
-      }
-      cm.gainItem(reward,1,true);
-      cm.sendOk("完成囉！繼續欣賞美麗的楓葉吧！\r\n" );
-      cm.dispose();
+    cm.safeDispose();
+  } else if (19 === status) {
+    quantity = mapleLeafToWhiteScroll * selection;
+
+    if (!cm.haveItem(4001126, quantity)) {
+      cm.sendOk('兌換失敗，#b#t4001126##k數量不足。');
+    } else {
+      cm.gainItem(4001126, -quantity);
+      cm.gainItem(2340000, selection);
+      cm.sendOk('兌換成功！');
     }
-  }
-}
 
-function makeChoices(a){
-  var result  = "這個世界充滿了美麗的#b#v4001126##t4001126##k\r\n若是你收集了足夠的#b#v4001126##t4001126##k，還可以和我交換禮物呢!\r\n";
-  for (var x = 0; x< a.length; x++){
-    result += " #L" + x + "##v" + a[x] + "##t" + a[x] + "##l\r\n";
+    cm.safeDispose();
+  } else if ([9, 13, 17].indexOf(status) !== -1) {
+    return endSession('有空隨時來看看呦！')
+  } else {
+    cm.safeDispose();
   }
-  result += "#L23##b我想兌換週年慶卷軸...#k#l\r\n";
-  return result;
-}
-
-function makeRequire(a,b,re,m){
-  var result  = "注意！做出來的物品#b素質都是隨機#k的唷~\r\n製作#b#v"+re+"##t"+re+"##k需要以下物品：\r\n\r\n";
-  for (var x = 0; x< a.length; x++){
-    result += "#v" + a[x] + "##t" + a[x] + "# " + b[x]+ "個#l\r\n";
-  }
-  result +="#fUI/UIWindow.img/QuestIcon/7/0##b"+m+"#k\r\n";
-  return result;
 }
