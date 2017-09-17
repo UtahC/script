@@ -310,7 +310,7 @@ function rectanglestages (cm) {
               clear(curMap, eim, cm);
               var exp = (Math.pow(2, curMap) * 50);
               cm.givePartyExp(exp, party);
-              cm.givePartyNX(5);
+              // cm.givePartyNX(5);
               cm.dispose();
             } else { // Wrong
               failstage(eim, cm);
