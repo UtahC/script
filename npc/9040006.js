@@ -28,7 +28,7 @@ function start() {
 		    var guess = getGroundItems();
 		    if (guess != null) {
 			if (combo == guess) {
-			    cm.getMap().getReactorByName("watergate").hitReactor(cm.getC());
+			    cm.getMap().getReactorByName("watergate").hitReactor(cm.getClient());
 			    cm.sendOk("您可以繼續。");
 			    cm.showEffect(true, "quest/party/clear");
 			    cm.playSound(true, "Party1/Clear");

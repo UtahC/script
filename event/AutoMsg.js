@@ -31,11 +31,11 @@ function start() {
   scheduleNew();
 
   var messages = [
-    "¦pªG¦³¥ô¦ó¥d¦í¡BµLªk°Ê¼u¡A½Ğ¨Ï¥Î @ea",
-    "¹DÀ]¡B²Õ¶¤¥ô°È¬Ò¯àÀò±o°Ó«°ÂI¼Æ"
+    "å¦‚æœæœ‰ä»»ä½•å¡ä½ã€ç„¡æ³•å‹•å½ˆï¼Œè«‹ä½¿ç”¨ @ea",
+    "é“é¤¨ã€çµ„éšŠä»»å‹™çš†èƒ½ç²å¾—å•†åŸé»æ•¸"
   ];
 
-  em.getChannelServer().broadcastPacket(MaplePacketCreator.yellowChat("[·¬¤§¨¦À°§U]" + messages[counter % messages.length]));
+  em.getChannelServer().broadcastPacket(MaplePacketCreator.yellowChat("[æ¥“ä¹‹è°·å¹«åŠ©]" + messages[counter % messages.length]));
 
   counter++;
 }

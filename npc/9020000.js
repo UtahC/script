@@ -1,7 +1,7 @@
 /**
  * Lakelis - Victoria Road: Kerning City (103000000)
  *
- * ²Õ¶¤¥ô°È - ¶W¯Åºñ¤ôÆF
+ * çµ„éšŠä»»å‹™ - è¶…ç´šç¶ æ°´éˆ
  */
 
 function start() {
@@ -10,19 +10,19 @@ function start() {
     cm.dispose();
   };
 
-  // ½T»{¬O§_¦b¶¤¥î¸Ì
+  // ç¢ºèªæ˜¯å¦åœ¨éšŠä¼è£¡
   if (null === cm.getParty()) {
-    return endSession("§A¥²¶·¦b¶¤¥î¸Ì­±");
+    return endSession("ä½ å¿…é ˆåœ¨éšŠä¼è£¡é¢");
   }
 
-  // ½T»{¬O§_¬°¶¤ªø
+  // ç¢ºèªæ˜¯å¦ç‚ºéšŠé•·
   if (! cm.isLeader()) {
-    return endSession("½Ğ³z¹L¶¤ªø¨Ó¶i¦æ¥ô°È");
+    return endSession("è«‹é€ééšŠé•·ä¾†é€²è¡Œä»»å‹™");
   }
 
-  // ½T»{¶¤¥î¤H¼Æ
+  // ç¢ºèªéšŠä¼äººæ•¸
   if (cm.getParty().getMembers().size() !== 4) {
-    return endSession("¶¤¥î¤H¼Æ¥²¶·¬O¥|¤H");
+    return endSession("éšŠä¼äººæ•¸å¿…é ˆæ˜¯å››äºº");
   }
 
   var it = cm.getParty().getMembers().iterator();
@@ -34,9 +34,9 @@ function start() {
     partyPlayer.removeAll(4001007);
     partyPlayer.removeAll(4001008);
 
-    // ½T»{µ¥¯Å
+    // ç¢ºèªç­‰ç´š
     if (partyPlayer.getLevel() < 21 || partyPlayer.getLevel() > 30) {
-      return endSession("¶¤¥î¦¨­ûµ¥¯Å¥²¶·¦b 21-30 ¤§¶¡");
+      return endSession("éšŠä¼æˆå“¡ç­‰ç´šå¿…é ˆåœ¨ 21-30 ä¹‹é–“");
     }
 
     if (partyPlayer.getMapid() === cm.getMapId()) {
@@ -44,9 +44,9 @@ function start() {
     }
   } while (it.hasNext());
 
-  // ½T»{¬O§_¦b¦P¤@±i¦a¹Ï
+  // ç¢ºèªæ˜¯å¦åœ¨åŒä¸€å¼µåœ°åœ–
   if (4 !== inMapPlayers) {
-    return endSession("©Ò¦³¶¤­û³£¶·¦b¦¹¦a¹Ï");
+    return endSession("æ‰€æœ‰éšŠå“¡éƒ½é ˆåœ¨æ­¤åœ°åœ–");
   }
 
   var em = cm.getEventManager("KerningPQ");
@@ -58,7 +58,7 @@ function start() {
   var prop = em.getProperty("state");
 
   if (! (null === prop || prop.equals("0"))) {
-    return endSession("¤w¦³¶¤¥î¦b¸Ì­±¬D¾Ô");
+    return endSession("å·²æœ‰éšŠä¼åœ¨è£¡é¢æŒ‘æˆ°");
   }
 
   em.startInstance(cm.getParty(), cm.getMap());

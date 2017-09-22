@@ -40,7 +40,7 @@ function action(mode, type, selection) {
 	}
     } else if (status == 1) {
 	cm.gainGP(90);
-	cm.getMap().getReactorByName("ghostgate").hitReactor(cm.getC());
+	cm.getMap().getReactorByName("ghostgate").hitReactor(cm.getClient());
 	cm.showEffect(true, "quest/party/clear");
 	cm.playSound(true, "Party1/Clear");
 	cm.dispose();

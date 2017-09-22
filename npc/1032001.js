@@ -83,7 +83,7 @@ function action(mode, type, selection) {
     cm.sendOk("So be it! Now go, and go with pride.");
     cm.dispose();
   } else if (status == 11) {
-    cm.sendNextPrev("You may be ready to take the next step as a #r§Å®v(¤õ,¬r)#k, #r§Å®v(¦B,¹p)#k or #r¹¬«Q#k.");
+    cm.sendNextPrev("You may be ready to take the next step as a #rå·«å¸«(ç«,æ¯’)#k, #rå·«å¸«(å†°,é›·)#k or #råƒ§ä¾¶#k.");
   } else if (status == 12) {
     cm.askAcceptDecline("But first I must test your skills. Are you ready?");
   } else if (status == 13) {
@@ -92,7 +92,7 @@ function action(mode, type, selection) {
     cm.sendOk("Go see the #bJob Instructor#k near Ellinia. He will show you the way.");
     cm.dispose();
   } else if (status == 21) {
-    cm.sendSimple("What do you want to become?#b\r\n#L0#§Å®v(¤õ,¬r)#l\r\n#L1#§Å®v(¦B,¹p)#l\r\n#L2#¹¬«Q#l#k");
+    cm.sendSimple("What do you want to become?#b\r\n#L0#å·«å¸«(ç«,æ¯’)#l\r\n#L1#å·«å¸«(å†°,é›·)#l\r\n#L2#åƒ§ä¾¶#l#k");
   } else if (status == 22) {
     var jobName;
     if (selection == 0) {

@@ -2,11 +2,11 @@ var status = -1;
 
 function action(mode, type, selection) {
   if (cm.getQuestStatus(3004) == 1) {
-    cm.sendOk("§A¦b§ä¤W¥jÅ]®Ñ¶Ü?«ØÄ³§A¥h§äºŞ®a¦ãº¿,¦o¦b¤½¶é¸Ì.");
+    cm.sendOk("ä½ åœ¨æ‰¾ä¸Šå¤é­”æ›¸å—?å»ºè­°ä½ å»æ‰¾ç®¡å®¶è‰¾ç‘ª,å¥¹åœ¨å…¬åœ’è£¡.");
     cm.forceCompleteQuest(3004);
     cm.dispose();
   } else {
-    cm.sendNext("½Ğ°İ¦³¤°»ò¨Æ±¡¶Ü??");
+    cm.sendNext("è«‹å•æœ‰ä»€éº¼äº‹æƒ…å—??");
     cm.dispose();
   }
 }

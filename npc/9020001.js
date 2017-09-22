@@ -37,12 +37,12 @@ importPackage(java.awt);
 var status = 0;
 var curMap;
 var questions = [
-  "�کҴ��X�����D�O�G��¾�C�h�ɡA�ݭn�h�ֵ��šH�Ц����ۦP�ƶq���q���ҵ���",
-  "�کҴ��X�����D�O�G��¾�C�h�ɡA�ݭn�h�֤O�q�H�Ц����ۦP�ƶq���q���ҵ���",
-  "�کҴ��X�����D�O�G��¾�k�v�ɡA�ݭn�h�ִ��O�H�Ц����ۦP�ƶq���q���ҵ���",
-  "�کҴ��X�����D�O�G��¾�}�b��ɡA�ݭn�h�ֱӱ��H�Ц����ۦP�ƶq���q���ҵ���",
-  "�کҴ��X�����D�O�G��¾�s��ɡA�ݭn�h�ֱӱ��H�Ц����ۦP�ƶq���q���ҵ���",
-  "�کҴ��X�����D�O�G��¾�G��ɡA�ݭn�h�ֵ��šH�Ц����ۦP�ƶq���q���ҵ���"
+  "我所提出的問題是：轉職劍士時，需要多少等級？請收集相同數量的通行證給我",
+  "我所提出的問題是：轉職劍士時，需要多少力量？請收集相同數量的通行證給我",
+  "我所提出的問題是：轉職法師時，需要多少智力？請收集相同數量的通行證給我",
+  "我所提出的問題是：轉職弓箭手時，需要多少敏捷？請收集相同數量的通行證給我",
+  "我所提出的問題是：轉職盜賊時，需要多少敏捷？請收集相同數量的通行證給我",
+  "我所提出的問題是：轉職二轉時，需要多少等級？請收集相同數量的通行證給我"
 ];
 var qanswers = [10, 35, 25, 25, 25, 30];
 var party;
@@ -164,7 +164,7 @@ function action(mode, type, selection) {
               cm.gainItem(4001008, 1);
               eim.setProperty(answered, "true");
             } else if (eim.getProperty(answered).equals("true")){
-              cm.sendNext("�A�����ͭ��٨S����������?");
+              cm.sendNext("你的隊友們還沒收集完成嗎?");
             } else
               cm.sendNext("I'm sorry, but that is not the right answer! Please have the correct number of coupons in your inventory.");
           }

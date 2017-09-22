@@ -24,7 +24,7 @@ function enter (pi) {
   var elevator = pi.getEventManager("elevator");
 
   if (elevator == null) {
-    pi.getPlayer().dropMessage(5, "¹q±è¦n¹³¬G»Ù¤F...");
+    pi.getPlayer().dropMessage(5, "é›»æ¢¯å¥½åƒæ•…éšœäº†...");
 
     return false;
   }
@@ -41,7 +41,7 @@ function enter (pi) {
     return true;
   }
 
-  pi.getPlayer().dropMessage(5, "¹q±èªùÃöµÛ...");
+  pi.getPlayer().dropMessage(5, "é›»æ¢¯é–€é—œè‘—...");
 
   return false;
 }
