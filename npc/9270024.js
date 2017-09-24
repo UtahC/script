@@ -18,14 +18,14 @@ function action(mode, type, selection) {
 	cm.sendSimple("Let's see...I can totally transform your face into something new. Don't you want to try it? For #b#t5152038##k, you can get the face of your liking. Take your time in choosing the face of your preference...\r\n\#L2#Let me get my dream face!#l");
     } else if (selection == 2) {
 	facenew = Array();
-	if (cm.getChar().getGender() == 0) {
+	if (cm.getPlayer().getGender() == 0) {
 	    for(var i = 0; i < mface.length; i++) {
-		facenew.push(mface[i] + cm.getChar().getFace() % 1000 - (cm.getChar().getFace() % 100));
+		facenew.push(mface[i] + cm.getPlayer().getFace() % 1000 - (cm.getPlayer().getFace() % 100));
 	    }
 	}
-	if (cm.getChar().getGender() == 1) {
+	if (cm.getPlayer().getGender() == 1) {
 	    for(var i = 0; i < fface.length; i++) {
-		facenew.push(fface[i] + cm.getChar().getFace() % 1000 - (cm.getChar().getFace() % 100));
+		facenew.push(fface[i] + cm.getPlayer().getFace() % 1000 - (cm.getPlayer().getFace() % 100));
 	    }
 	}
 	cm.sendStyle("Let's see... I can totally transform your face into something new. Don't you want to try it? For #b#t5152038##k, you can get the face of your liking. Take your time in choosing the face of your preference...", facenew);

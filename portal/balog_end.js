@@ -4,7 +4,7 @@ function enter(pi) {
     return false;
   }
 
-  pi.gainExpR(pi.getPlayer().getMapId() == 105100301 ? 260000 : 520000);
+  pi.gainExp(pi.getPlayer().getMapId() == 105100301 ? 260000 : 520000);
   // pi.gainMaplePoint(pi.getPlayer().getMapId() == 105100301 ? 20 : 30);
   pi.gainItem(4001261,1);
   pi.warp(105100100,0);

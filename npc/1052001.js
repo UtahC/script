@@ -93,7 +93,7 @@ function action(mode, type, selection) {
   } else if (status == 11) {
     cm.sendNextPrev("You may be ready to take the next step as a #r刺客#k or #r俠盜#k.");
   } else if (status == 12) {
-    cm.askAcceptDecline("But first I must test your skills. Are you ready?");
+    cm.sendAcceptDecline("But first I must test your skills. Are you ready?");
   } else if (status == 13) {
     cm.startQuest(100009);
     cm.gainItem(4031011, 1);

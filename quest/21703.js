@@ -24,7 +24,7 @@ function start(mode, type, selection) {
     } else if (status == 5) {
 	qm.sendNextPrevS("#b(Is that really true?)#k", 2);
     } else if (status == 6) {
-	qm.askAcceptDecline("Okay, now... #bEnter the Training Center again#k, defeat #r30#k #o9300343#s, and show me what you're made of! You'll have to exert all your energy to defeat them! Go, go, go! Rise above me!");
+	qm.sendAcceptDecline("Okay, now... #bEnter the Training Center again#k, defeat #r30#k #o9300343#s, and show me what you're made of! You'll have to exert all your energy to defeat them! Go, go, go! Rise above me!");
     } else if (status == 7) {
 	qm.forceStartQuest();
 	qm.sendOk("Now go and take on those monstrous #o9300343#s!");
@@ -56,7 +56,7 @@ function end(mode, type, selection) {
 	    qm.gainExp(2800);
 	}
 	qm.sendNextS("(You remembered the #bCombo Ability#k skill! You were skeptical of the training at first, since the old man suffers from Alzheimer's and all, but boy, was it effective!)", 2);
-	qm.AranTutInstructionalBubble("Effect/BasicEff.img/AranGetSkill");
+	qm.aranTutInstructionalBubble("Effect/BasicEff.img/AranGetSkill");
     } else if (status == 4) {
 	qm.sendPrev("Now report back to #p1201000#. I know she'll be ecstatic when she sees the progress you've made!");
 	qm.dispose();

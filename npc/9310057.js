@@ -53,7 +53,7 @@ function action(mode, type, selection) {
 				}	
 				if (next && size >= 1) {
 						if (em.getInstance("English" + selection) == null) {
-						em.startInstance_Party("" + selection, cm.getPlayer());
+						em.startInstanceParty("" + selection, cm.getPlayer());
 						} else {
 						cm.sendOk("Another party quest has already entered this channel.");
 						}

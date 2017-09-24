@@ -28,12 +28,12 @@ function action(mode, type, selection) {
     }
     if (status == 1) {
 	hairnew = Array();
-	if (cm.getChar().getGender() == 0) {
+	if (cm.getPlayer().getGender() == 0) {
 	    for(var i = 0; i < mhair.length; i++) {
 		hairnew.push(mhair[i]);
 	    }
 	}
-	if (cm.getChar().getGender() == 1) {
+	if (cm.getPlayer().getGender() == 1) {
 	    for(var i = 0; i < fhair.length; i++) {
 		hairnew.push(fhair[i]);
 	    }

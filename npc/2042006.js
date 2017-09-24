@@ -21,7 +21,7 @@ function action(mode, type, selection) {
         }
     } else if (status == 1) {
         try {
-            cm.getChar().getEventInstance().registerCarnivalParty(request.getChallenger(), request.getChallenger().getMap(), 1);
+            cm.getPlayer().getEventInstance().registerCarnivalParty(request.getChallenger(), request.getChallenger().getMap(), 1);
             cm.dispose();
         } catch (e) {
             cm.sendOk("The challenge is no longer valid.");

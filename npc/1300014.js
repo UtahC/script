@@ -28,11 +28,11 @@ function action(mode, type, selection) {
 
   if (status == 0) {
     if (cm.isQuestActive(2314)) {
-      cm.PlayerToNpc("已調查強烈的結界。似乎被魔法中強烈的結界不容易前進。聽說菇菇國王的魔法大臣知道方法…");
+      cm.sendPlayerToNpc("已調查強烈的結界。似乎被魔法中強烈的結界不容易前進。聽說菇菇國王的魔法大臣知道方法…");
     } else if(cm.isQuestActive(2322)) {
-      cm.PlayerToNpc("已調查城壁。似乎沒有特別的入侵方法。");
+      cm.sendPlayerToNpc("已調查城壁。似乎沒有特別的入侵方法。");
     } else if (cm.isQuestFinished(2318) && cm.haveItem(2430014)) {
-      cm.PlayerToNpc("I think I may be able to break the barrier using #t2430014#.");
+      cm.sendPlayerToNpc("I think I may be able to break the barrier using #t2430014#.");
     } else {
       cm.dispose();
     }

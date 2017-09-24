@@ -111,7 +111,7 @@ function action(mode, type, selection) {
 					cm.dispose();
 				}else{
 					if(cm.haveItem(4001092, 1) && cm.isLeader()){
-						var party = cm.getChar().getEventInstance().getPlayers();
+						var party = cm.getPlayer().getEventInstance().getPlayers();
 						for (var outt = 0; outt<party.size(); outt++)
                         {
                             var exitMapz = eim.getMapInstance(240050200);
@@ -127,7 +127,7 @@ function action(mode, type, selection) {
 				var eim = cm.getPlayer().getEventInstance();
 				var party = eim.getPlayers();
 				if(cm.haveItem(4001093, 6) && cm.isLeader()){
-						var party = cm.getChar().getEventInstance().getPlayers();
+						var party = cm.getPlayer().getEventInstance().getPlayers();
 						for (var outt = 0; outt<party.size(); outt++)
                         {
                             var exitMapz = eim.getMapInstance(240050600);

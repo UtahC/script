@@ -147,7 +147,7 @@ function action(mode, type, selection) {
                         cm.sendOk("You need 100,000 A-Cash.");
                 } else {
                         cm.getPlayer().modifyCSPoints(1, -100000, false);
-                        em.startInstance_CharID(cm.getPlayer());
+                        em.startInstanceCharID(cm.getPlayer());
                 }
                 cm.dispose();
         } else if (status == 6) {

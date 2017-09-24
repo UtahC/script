@@ -22,14 +22,14 @@ function start(mode, type, selection) {
     } else if (status == 4) {
 	qm.sendNextPrevS("Oh no, no, no. Twenty is plenty", 2);
     } else if (status == 5) {
-	qm.askAcceptDecline("You don't have to be so modest. I understand your desire to quickly become the hero you once were. This sort of attitude is what makes you a hero.");
+	qm.sendAcceptDecline("You don't have to be so modest. I understand your desire to quickly become the hero you once were. This sort of attitude is what makes you a hero.");
     } else if (status == 6) {
 	qm.forceStartQuest();
 	qm.sendNextS('#b(You accepted, thinking you might end up having to 999 of them if you let her keep talking.)#k', 2);
     } else if (status == 7) {
 	qm.sendNextPrevS('Please go ahead and slay 20 #o0100133#s.', 8);
     } else if (status == 8) {
-	qm.AranTutInstructionalBubble("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialArrow3");
+	qm.aranTutInstructionalBubble("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialArrow3");
 	qm.dispose();
     }
 }

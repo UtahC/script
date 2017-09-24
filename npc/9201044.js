@@ -131,7 +131,7 @@ function action(mode, type, selection) {
 			} else {
 			    cm.sendOk("A number of slimes has been spawned according to how many platforms are correct.");
 			    var rand = java.lang.Math.floor(java.lang.Math.random() * 4);
-			    cm.spawnMob(9400519 + rand, num_correct, 1663, 196);
+			    cm.spawnMonster(9400519 + rand, num_correct, 1663, 196);
 			}
 		    }
 		}

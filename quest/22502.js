@@ -16,7 +16,7 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.askAcceptDecline("Wouldn't a lizard enjoy a #bHandful of Hay#k, like a cow? There are a lot of #bHaystacks#k nearby, so try feeding it that.");
+	qm.sendAcceptDecline("Wouldn't a lizard enjoy a #bHandful of Hay#k, like a cow? There are a lot of #bHaystacks#k nearby, so try feeding it that.");
     } else if (status == 1) {
 	qm.forceStartQuest();
 	qm.evanTutorial("UI/tutorial/evan/12/0", 1);

@@ -25,7 +25,7 @@ function start(mode, type, selection) {
     } else if (status == 3) {
 	qm.sendNextPrev("Do you know how to get items from boxes? All you have to do is break the Boxes like you're attacking a monster. The difference is that you can attack monsters using your Skills, but you can #bonly use Regular Attacks to break Boxes#k.");
     } else if (status == 4) {
-	qm.askAcceptDecline("Please bring me 1 #b#t4032267##k and 1 #b#t4032268##k found inside those Boxes. I'll make you an awesome Chair as soon as I have what I need. I'll wait here!");
+	qm.sendAcceptDecline("Please bring me 1 #b#t4032267##k and 1 #b#t4032268##k found inside those Boxes. I'll make you an awesome Chair as soon as I have what I need. I'll wait here!");
     } else if (status == 5) {
 	qm.forceStartQuest();
 	qm.summonMsg(9);

@@ -5,7 +5,7 @@
  */
 
 function start() {
-    cm.askAcceptDecline("Have you found all proof of test? Do you want to get out of here?");
+    cm.sendAcceptDecline("Have you found all proof of test? Do you want to get out of here?");
 }
 
 function action(mode, type, selection) {

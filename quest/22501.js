@@ -23,7 +23,7 @@ function start(mode, type, selection) {
     } else if (status == 2) {
 	qm.sendNextPrev("Hi, I was just born a few minutes ago. How would I know what I eat? All I know is that I'm a Dragon... I'm YOUR Dragon. And you're my master. You have to treat me well!");
     } else if (status == 3) {
-	qm.askAcceptDecline("I guess we're supposed to learn together. But I'm hungry. Master, I want food. Remember, I'm a baby! I'll start crying soon!");
+	qm.sendAcceptDecline("I guess we're supposed to learn together. But I'm hungry. Master, I want food. Remember, I'm a baby! I'll start crying soon!");
     } else if (status == 4) {
 	qm.forceStartQuest();
 	qm.sendOkS("#b(Mir the baby Dragon appears to be extremely hungry. You must feed him. Maybe your Dad can give you advice on what dragons eat.)", 2);

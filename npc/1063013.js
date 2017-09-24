@@ -20,7 +20,7 @@ function action(mode, type, selection) {
 
   if (105090000 !== mapId) {
     index = maps[mapId];
-  } else if (cm.getChar().getPosition().getY() < 1000) {
+  } else if (cm.getPlayer().getPosition().getY() < 1000) {
     index = maps[mapId].top;
   } else {
     index = maps[mapId].bottom;

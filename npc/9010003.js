@@ -34,19 +34,19 @@ function action(mode, type, selection) {
 	    cm.sendOk("You have to be at least level 21 to enter #rField of Judgement.#k");
 	} else if (cm.getPlayerStat("LVL") >= 21 && cm.getPlayerStat("LVL") < 31) {
 	    cm.gainMeso(-1000000);
-	    em.getInstance("lolcastle1").registerPlayer(cm.getChar());
+	    em.getInstance("lolcastle1").registerPlayer(cm.getPlayer());
 	} else if (cm.getPlayerStat("LVL") >= 31 && cm.getPlayerStat("LVL") < 51) {
 	    cm.gainMeso(-1000000);
-	    em.getInstance("lolcastle2").registerPlayer(cm.getChar());
+	    em.getInstance("lolcastle2").registerPlayer(cm.getPlayer());
 	} else if (cm.getPlayerStat("LVL") >= 51 && cm.getPlayerStat("LVL") < 71) {
 	    cm.gainMeso(-1000000);
-	    em.getInstance("lolcastle3").registerPlayer(cm.getChar());
+	    em.getInstance("lolcastle3").registerPlayer(cm.getPlayer());
 	} else if (cm.getPlayerStat("LVL") >= 71 && cm.getPlayerStat("LVL") < 91) {
 	    cm.gainMeso(-1000000);
-	    em.getInstance("lolcastle4").registerPlayer(cm.getChar());
+	    em.getInstance("lolcastle4").registerPlayer(cm.getPlayer());
 	} else {
 	    cm.gainMeso(-1000000);
-	    em.getInstance("lolcastle5").registerPlayer(cm.getChar());
+	    em.getInstance("lolcastle5").registerPlayer(cm.getPlayer());
 	}
 	cm.dispose();
     }

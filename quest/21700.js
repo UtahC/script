@@ -20,7 +20,7 @@ function start(mode, type, selection) {
     } else if (status == 3) {
 	qm.sendNextPrevS('How do I recover my abilities?', 2);
     } else if (status == 4) {
-	qm.askAcceptDecline("There is only one way to do that. Train! Train! Train! Train! If you continue to train, your body will instinctively remember its abilities. To help you through the process, I'll introduce you to an instructor.");
+	qm.sendAcceptDecline("There is only one way to do that. Train! Train! Train! Train! If you continue to train, your body will instinctively remember its abilities. To help you through the process, I'll introduce you to an instructor.");
     } else if (status == 5) {
 	qm.forceStartQuest();
 	qm.sendNext("I gave you a #bPolearm#k because I figured it would be best for you to use a weapon you're familiar with. It will be useful in your training.");

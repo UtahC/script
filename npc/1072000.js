@@ -32,7 +32,7 @@ function action(mode, type, selection) {
     } else if (status == 1) {
 	cm.sendNextPrev("So you want to prove your skills? Very well...")
     } else if (status == 2) {
-	cm.askAcceptDecline("I will give you a chance if you're ready.");
+	cm.sendAcceptDecline("I will give you a chance if you're ready.");
     } else if (status == 3) {
 	cm.startQuest(100004);
 	cm.sendOk("You will have to collect me #b30 #t4031013##k. Good luck.")

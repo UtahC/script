@@ -74,13 +74,13 @@ function action(mode, type, selection) {
         if (carnivalparty.isWinner()) {
 	    vic++;
 	    cm.getPlayer().updateOneInfo(1301, "vic", "" + vic);
-            carnivalparty.removeMember(cm.getChar());
-            cm.gainExpR(exp);
+            carnivalparty.removeMember(cm.getPlayer());
+            cm.gainExp(exp);
         } else {
 	    los++;
 	    cm.getPlayer().updateOneInfo(1301, "lose", "" + los);
-            carnivalparty.removeMember(cm.getChar());
-            cm.gainExpR(exp / 2);
+            carnivalparty.removeMember(cm.getPlayer());
+            cm.gainExp(exp / 2);
 
         }
 	cm.getPlayer().updateOneInfo(1301, "VR", "" + (java.lang.Math.ceil((vic * 100) / los)));

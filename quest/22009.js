@@ -16,7 +16,7 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.askAcceptDecline("If the number of foxes has increased near the farm just like it has near our house, that'll interface with Dad's farm work. We should investigate this. Don't you agree?");
+	qm.sendAcceptDecline("If the number of foxes has increased near the farm just like it has near our house, that'll interface with Dad's farm work. We should investigate this. Don't you agree?");
     } else if (status == 1) {
 	qm.forceStartQuest();
 	qm.sendOk("Go to the #bCentral Farm#k and ask #bDad#k about the situation. If the number of Cunning Foxes has increased there as well, we're going to have to conduct a major Cunning Fox hunt.");

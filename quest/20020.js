@@ -15,7 +15,7 @@ function start(mode, type, selection) {
     } else if (status == 1) {
 	qm.sendNext("There isn't a single path to becoming a Knight. In fact, there are five of them laid out for you. It's up to you to choose which path you'd like to take, but it should definitely be something you will not regret. That's why... I am offering to show you what you'll look like once you become a Knight.");
     } else if (status == 2) {
-	qm.sendNext("What do you think? Are you interested in seeing yourself as the leader of the Knights? If you have already decided what kind of Knight you'd like to become, then you won't necessarily have to look at it...#b#L0#Show me how I'd look like as the leader of the Knights.#l ..#b#L1#No, I'm okay.");
+	qm.sendSimple("What do you think? Are you interested in seeing yourself as the leader of the Knights? If you have already decided what kind of Knight you'd like to become, then you won't necessarily have to look at it...#b#L0#Show me how I'd look like as the leader of the Knights.#l ..#b#L1#No, I'm okay.");
     } else if (status == 3) {
 	qm.sendYesNo("Would you like to see for it yourself right now? A short clip will come out soon. Be prepared for what you are about to witness.");
     // IF selected no
@@ -23,7 +23,7 @@ function start(mode, type, selection) {
     } else if (status == 4) {
 	qm.forceStartQuest();
 	qm.playerSummonHint(false);
-	qm.MovieClipIntroUI(true);
+	qm.movieClipIntroUI(true);
 	qm.warp(913040100, 0);
 	qm.dispose();
     }

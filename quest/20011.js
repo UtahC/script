@@ -21,7 +21,7 @@ function start(mode, type, selection) {
     } else if (status == 1) {
 	qm.sendNextPrev("Press the #bC#k to use your Regular Attack. Usually the C is located #bat the bottom left of the keyboard#k, but you don't need me to tell you that, right? Find the C and try it out!");
     } else if (status == 2) {
-	qm.askAcceptDecline("Now that you've tried it, we've got to test it out. In this area, you can find the weakest #r#o100120##ks in Ereve, which is perfect for you. Try hunting #r1#k. I'll give you a reward when you get back.");
+	qm.sendAcceptDecline("Now that you've tried it, we've got to test it out. In this area, you can find the weakest #r#o100120##ks in Ereve, which is perfect for you. Try hunting #r1#k. I'll give you a reward when you get back.");
     } else if (status == 3) {
 	qm.forceStartQuest();
 	qm.summonMsg(4);

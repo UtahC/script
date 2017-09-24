@@ -16,7 +16,7 @@ function action(mode, type, selection) {
     cm.gainItem(itemid, 1);
   }
   // cm.gainMaplePoint(25);
-  cm.gainExpR(90000);
+  cm.gainExp(90000);
   cm.getPlayer().endPartyQuest(1205);
   cm.warp(926100700,0);
   cm.dispose();

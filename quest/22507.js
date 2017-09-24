@@ -40,7 +40,7 @@ function start(mode, type, selection) {
     } else if (status == 13) {
 	qm.sendNextPrevS("#bIt's not part of my five year plan. I'm just kidding, but seriously, I'm a farmer's son...#k", 2);
     } else if (status == 14) {
-	qm.askAcceptDecline("Bah, well let me tell you this. It's impossible for a Dragon Master to live a peaceful life. I'll have plenty of chances to prove my skills. Trust me, our life will be one big adventure. Promise me that you'll stick with me, okay?");
+	qm.sendAcceptDecline("Bah, well let me tell you this. It's impossible for a Dragon Master to live a peaceful life. I'll have plenty of chances to prove my skills. Trust me, our life will be one big adventure. Promise me that you'll stick with me, okay?");
     } else if (status == 15) {
 	qm.forceStartQuest();
 	qm.sendNextS("Hehehe, alright then, master. Let's get to it!", 1);

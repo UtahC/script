@@ -26,7 +26,7 @@ function action(mode, type, selection) {
     } else if (status == 1) {
 	cm.sendYesNo("你想體驗一下海盜的感覺嗎？");
     } else if (status == 2) {
-	cm.MovieClipIntroUI(true);
+	cm.movieClipIntroUI(true);
 	cm.warp(1020500, 0); // Effect/Direction3.img/pirate/Scene00
 	cm.dispose();
     }

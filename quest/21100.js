@@ -24,7 +24,7 @@ function start(mode, type, selection) {
     } else if (status == 5) {
 	qm.sendNextPrevS("Come to think of it, I did see a #p1201001# in town.", 2);
     } else if (status == 6) {
-	qm.askAcceptDecline("Yes, that's it. According to what's been recorded, the weapon of a hero will recognize its rightful owner, and if you''re the hero that used the #p1201001#, the #p1201001# will react when you grab the #p1201001#. Please go find the #b#p1201001# and click on it.#k");
+	qm.sendAcceptDecline("Yes, that's it. According to what's been recorded, the weapon of a hero will recognize its rightful owner, and if you''re the hero that used the #p1201001#, the #p1201001# will react when you grab the #p1201001#. Please go find the #b#p1201001# and click on it.#k");
     } else if (status == 7) {
 	if (qm.getQuestStatus(21100) == 0) {
 	    qm.forceCompleteQuest();

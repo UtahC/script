@@ -18,10 +18,10 @@ function action(mode, type, selection) {
       cm.gainItem(itemid, 1);
       if (em.getProperty("stage").equals("2")) {
         // cm.gainMaplePoint(50);
-        cm.gainExpR(140000);
+        cm.gainExp(140000);
       } else {
         // cm.gainMaplePoint(35);
-        cm.gainExpR(105000);
+        cm.gainExp(105000);
       }
     }
     cm.getPlayer().endPartyQuest(1205);

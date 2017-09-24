@@ -12,7 +12,7 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.askAcceptDecline("O.(Shivering) I...was...so...scared...in...here. Please take me to Athena Pierce!");
+	qm.sendAcceptDecline("O.(Shivering) I...was...so...scared...in...here. Please take me to Athena Pierce!");
     } else if (status == 1) {
 	if (qm.getQuestStatus(21001) == 0) {
 	    qm.gainItem(4001271, 1);
@@ -35,7 +35,7 @@ function end(mode, type, selection) {
 	    if (qm.haveItem(4001271)) {
 		qm.gainItem(4001271, -1);
 	    }
-	    qm.MovieClipIntroUI(true);
+	    qm.movieClipIntroUI(true);
 	    qm.forceCompleteQuest();
 	    qm.warp(914090010, 0);
 	    qm.dispose();

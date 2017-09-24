@@ -21,7 +21,7 @@ function start(mode, type, selection) {
     } else if (status == 1) {
 	qm.sendNextPrev("We can't just sit here and do nothing while our enemies get stronger. Our own fear will only come back to haunt us.");
     } else if (status == 2) {
-	qm.askAcceptDecline("But I won't worry too much. Someone as determined as you will be able to protect Maple World from danger, right? If you are brave enough to volunteer to become one of the Knights, I know I can count on you. \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#i1142065# #t1142065# - 1");
+	qm.sendAcceptDecline("But I won't worry too much. Someone as determined as you will be able to protect Maple World from danger, right? If you are brave enough to volunteer to become one of the Knights, I know I can count on you. \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#i1142065# #t1142065# - 1");
     } else if (status == 3) {
 	if (qm.getQuestStatus(20015) == 0) {
 	    qm.gainItem(1142065, 1);

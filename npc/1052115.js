@@ -33,14 +33,14 @@ function action(mode, type, selection) {
 			if (cm.getPlayer().getLevel() < 25 || cm.getPlayer().getLevel() > 30 || !cm.isLeader()) {
 				cm.sendOk("You must be in the Level Range 25-30 and be the party leader.");
 			} else {
-				if (!cm.start_PyramidSubway(-1)) {
+				if (!cm.startPyramidSubway(-1)) {
 					cm.sendOk("The Dusty Platform is currently full at the moment.");
 				}
 			}
 			//todo
 		} else if (selection == 2) {
 			if (cm.haveItem(4001321)) {
-				if (cm.bonus_PyramidSubway(-1)) {
+				if (cm.bonusPyramidSubway(-1)) {
 					cm.gainItem(4001321, -1);
 				} else {
 					cm.sendOk("The Train 999 is currently full at the moment");

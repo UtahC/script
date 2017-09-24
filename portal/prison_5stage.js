@@ -1,3 +1,3 @@
 function enter(pi) {
-    pi.warpS(pi.getMapId(),3);
+    pi.warp(pi.getMapId(),3);
 }

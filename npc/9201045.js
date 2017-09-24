@@ -48,7 +48,7 @@ function action(mode, type, selection) {
 	    }
 	    if (em.getProperty("apq4").equals("0") || em.getProperty("apq4").equals("1")) {
 	    	cm.warpParty(670010700,18);
-	    	cm.spawnMob(9400536,1,674,511);
+	    	cm.spawnMonster(9400536,1,674,511);
 		em.setProperty("apq4", "2");
 	    } else {
 		if (cm.haveItem(4031594,1)) {

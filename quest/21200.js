@@ -12,7 +12,7 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.askAcceptDecline("How's the training going? Wow, looking at you, I can tell your levels have shot through the roof. That's amazing... well, anyway, I see that you'r busy, but you'll have to return to the island for a bit.");
+	qm.sendAcceptDecline("How's the training going? Wow, looking at you, I can tell your levels have shot through the roof. That's amazing... well, anyway, I see that you'r busy, but you'll have to return to the island for a bit.");
     } else if (status == 1) {
 	qm.forceStartQuest(21200, "3"); //??
 	qm.forceCompleteQuest();
@@ -32,7 +32,7 @@ function end(mode, type, selection) {
 	    qm.dispose();
 	    return;
 	} else if (status == 13) {
-	    qm.MovieClipIntroUI(true);
+	    qm.movieClipIntroUI(true);
 	    qm.warp(914090200, 0);
 	    qm.dispose();
 	    return;

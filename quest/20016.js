@@ -33,7 +33,7 @@ function start(mode, type, selection) {
     } else if (status == 7) {
 	qm.sendNextPrev("We have to get stronger so we can defeat the Black Mage if he revives. Our primary goal is to prevent him from destroying Maple World, and you will play a prominent role in that.");
     } else if (status == 8) {
-	qm.askAcceptDecline("That concludes my explanation. Have I answered all your questions? \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#fUI/UIWindow.img/QuestIcon/8/0# 380 exp");
+	qm.sendAcceptDecline("That concludes my explanation. Have I answered all your questions? \r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# \r\n#fUI/UIWindow.img/QuestIcon/8/0# 380 exp");
     } else if (status == 9) {
 	if (qm.getQuestStatus(20016) == 0) {
 	    qm.gainExp(380);

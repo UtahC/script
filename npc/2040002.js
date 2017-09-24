@@ -41,7 +41,7 @@ function action(mode, type, selection) {
 		cm.sendPrev("Someone else must be inside looking for the dollhouse. Unfortunately I can only let in one person at a time, so please wait for your turn.");
 	    } else {
 		cm.removeAll(4031093);
-		dh.startInstance(cm.getChar());
+		dh.startInstance(cm.getPlayer());
 	    }
 	    cm.dispose();
 	}

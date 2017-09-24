@@ -29,7 +29,7 @@ function action(mode, type, selection) {
     } else
         status++;
     if (status == 0) { 
-            cm.askAcceptDecline("Would you like to challenge me to a game of Rock, Paper Scissors?"); 
+            cm.sendAcceptDecline("Would you like to challenge me to a game of Rock, Paper Scissors?"); 
     } else if (status == 1) { 
             cm.sendSimple("Choose one...\r\n" 
             + "#L0##fUI/UIWindow.img/RpsGame/Frock##l" 

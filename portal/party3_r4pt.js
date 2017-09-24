@@ -27,9 +27,9 @@
 function enter(pi) {
 	try{
 		if(Math.random() * 3 > 1){
-			pi.warpS(920010600, Math.random() * 3 > 1 ? 14 : 2);
+			pi.warp(920010600, Math.random() * 3 > 1 ? 14 : 2);
 		}else{
-			pi.warpS(920010600, "in01");
+			pi.warp(920010600, "in01");
 		}
 		return true;
 	}catch (e) {

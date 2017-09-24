@@ -134,7 +134,7 @@ function action(mode, type, selection) {
         //cm.getQuestRecord(150000).setCustomData(null);
         cm.dispose();
       } else if (sel == 1) {
-        cm.askAcceptDecline("Do you want to quit? You really want to leave here?");
+        cm.sendAcceptDecline("Do you want to quit? You really want to leave here?");
       } else if (sel == 2) {
         if (cm.getParty() == null) {
           var stage = get_stageId(cm.getMapId());

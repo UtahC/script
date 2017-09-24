@@ -63,7 +63,7 @@ function action(mode, type, selection) {
                 } else {
                     //Send challenge packet here
                     var owner = cm.getChannelServer().getPlayerStorage().getCharacterByName(cm.getEventManager("cpq").getInstance("cpq"+mapid).getPlayers().get(0).getParty().getLeader().getName());
-                    owner.addCarnivalRequest(cm.getCarnivalChallenge(cm.getChar()));
+                    owner.addCarnivalRequest(cm.getCarnivalChallenge(cm.getPlayer()));
                     //if (owner.getConversation() != 1) {
                         cm.openNpc(owner.getClient(), 2042001);
                     //}

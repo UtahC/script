@@ -20,7 +20,7 @@ function start(mode, type, selection) {
     } else if (status == 1) {
 	qm.sendNextPrevS("#But I don't. It's not like age has anything to do with this...", 2);
     } else if (status == 2) {
-	qm.askAcceptDecline("Since you're older, you must be more experienced in the world, too. Makes sense that you'd know more than me. Oh, fine. I'll ask someone who's even older than you, master!");
+	qm.sendAcceptDecline("Since you're older, you must be more experienced in the world, too. Makes sense that you'd know more than me. Oh, fine. I'll ask someone who's even older than you, master!");
     } else if (status == 3) {
 	qm.forceStartQuest();
 	qm.sendOkS("#b(You already asked Dad once, but you don't have any better ideas. Time to ask him again!)#k", 2);

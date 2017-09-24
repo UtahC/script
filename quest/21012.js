@@ -16,7 +16,7 @@ function start(mode, type, selection) {
     } else if (status == 1) {
 	qm.sendNextPrev("Anyway, what's with the long face? Is something wrong? Hm? You''re not sure whether you''re really a hero or not? You lost your memory?! No way... It must be because you were trapped inside the ice for hundreds and hundreds of years.");
     } else if (status == 2) {
-	qm.askAcceptDecline("Hm, how about you trying out that sword? Wouldn't that bring back some memories? How about #bfighting some monsters#k?");
+	qm.sendAcceptDecline("Hm, how about you trying out that sword? Wouldn't that bring back some memories? How about #bfighting some monsters#k?");
     } else if (status == 3) {
 	qm.forceStartQuest();
 	qm.sendNext("It just so happens that there are a lot of #r#o9300383#s#k near here. How about defeating just #r3#k of them? It could help you remember a thing or two.");

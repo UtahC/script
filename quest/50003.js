@@ -13,7 +13,7 @@ function start(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-	qm.askAcceptDecline("Watch out, because he seems... much more powerful than before. Do not underestimate him!");
+	qm.sendAcceptDecline("Watch out, because he seems... much more powerful than before. Do not underestimate him!");
     } else if (status == 1) {
 	qm.forceStartQuest();
 	qm.dispose();

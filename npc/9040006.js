@@ -84,8 +84,8 @@ function start() {
 				string += " attempt.";
 
 				//spawn one black and one myst knight
-				cm.spawnMob(9300036, -350, 150);
-				cm.spawnMob(9300037, 400, 150);
+				cm.spawnMonster(9300036, -350, 150);
+				cm.spawnMonster(9300037, 400, 150);
 
 				cm.sendOk(string);
 				eim.setProperty("stage3attempt",attempt + 1);
@@ -96,8 +96,8 @@ function start() {
 
 				for (var i = 0; i < 5; i++) {
 				    //keep getting new monsters, lest we spawn the same monster five times o.o!
-					cm.spawnMob(9300036, randX(), 150);
-					cm.spawnMob(9300037, randX(), 150);
+					cm.spawnMonster(9300036, randX(), 150);
+					cm.spawnMonster(9300037, randX(), 150);
 				}
 			    }
 			}

@@ -8,7 +8,7 @@ function start() {
 	if (em == null) {
 	    cm.sendOk("三轉任務好像有些問題");
 	} else {
-	    em.newInstance(cm.getName()).registerPlayer(cm.getChar());
+	    em.newInstance(cm.getName()).registerPlayer(cm.getPlayer());
 	}
     } else {
 	cm.sendOk("lul.");

@@ -86,7 +86,7 @@ function action(mode, type, selection) {
   } else if (status == 11) {
     cm.sendNextPrev("You may be ready to take the next step as a #r獵人#k or #r弩弓手#k.")
   } else if (status == 12) {
-    cm.askAcceptDecline("But first I must test your skills. Are you ready?");
+    cm.sendAcceptDecline("But first I must test your skills. Are you ready?");
   } else if (status == 13) {
     cm.startQuest(100000);
     cm.gainItem(4031010, 1);

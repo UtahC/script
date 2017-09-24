@@ -1,6 +1,6 @@
 function enter(pi) {
         if (pi.getPlayer().getParty() != null) {
-                //pi.warpParty_Instanced(921120600);
+                //pi.warpPartyInstanced(921120600);
 				var cleared = false;
 				switch(pi.getMapId() / 10) {
 					case 92304010:

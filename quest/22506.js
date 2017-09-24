@@ -18,7 +18,7 @@ function start(mode, type, selection) {
     if (status == 0) {
 	qm.sendNext("#b(You ask the Milk Cow to give you some milk.);
     } else if (status == 1) {
-	qm.askAcceptDecline("Moo...");
+	qm.sendAcceptDecline("Moo...");
     } else if (status == 2) {
 	qm.sendOk("#b(The Milk Cow gives you some milk. Go feed the milk to Mir.)#k");
 	qm.gainItem(4032454, 1);

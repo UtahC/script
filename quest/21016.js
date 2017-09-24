@@ -12,10 +12,10 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.askAcceptDecline("Shall we continue with your Basic Training? Before accepting, please make sure you have properly equipped your sword and your skills and potions are readily accessible.");
+	qm.sendAcceptDecline("Shall we continue with your Basic Training? Before accepting, please make sure you have properly equipped your sword and your skills and potions are readily accessible.");
     } else if (status == 1) {
 	qm.forceStartQuest();
-	qm.AranTutInstructionalBubble("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialArrow3");
+	qm.aranTutInstructionalBubble("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialArrow3");
 	qm.dispose();
     }
 }

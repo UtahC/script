@@ -23,7 +23,7 @@ function start(mode, type, selection) {
     } else if (status == 2) {
 	qm.sendNextPrev("Wait, so I am looking at the very person that your race has been waiting for hundreds of years? Wow!! I could tell the hero looked a bit different from the rest...");
     } else if (status == 3) {
-	qm.askAcceptDecline("But because of that curse of the Black Wizard that got you trapped in ice for hundreds of years, you do look quite weak. #bHere's a potion for recovery. Please take it#k.");
+	qm.sendAcceptDecline("But because of that curse of the Black Wizard that got you trapped in ice for hundreds of years, you do look quite weak. #bHere's a potion for recovery. Please take it#k.");
     } else if (status == 4) { // TODO HP set to half
 	qm.sendNext("Just drink it up first, then we'll continue our talk!");
 	qm.gainItem(2000022, 1);

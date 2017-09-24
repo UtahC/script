@@ -23,7 +23,7 @@ function start(mode, type, selection) {
     } else if (status == 2) {
 	qm.sendNextPrev("Oh, let me warn you that this is a Quest. You may have noticed that NPCs around Maple World occasionally ask you for various favors. A favor of that sort is called a #bQuest#k. You will receive reward items or EXP upon completing Quests, so I strongly suggest you diligently fulfill the favors of Maple NPCs.");
     } else if (status == 3) {
-	qm.askAcceptDecline("Would you like to meet #b#p1102005##k, who can tell you about hunting? You can find #p1102005# by following the arrow to the left.");
+	qm.sendAcceptDecline("Would you like to meet #b#p1102005##k, who can tell you about hunting? You can find #p1102005# by following the arrow to the left.");
     } else if (status == 4) {
 	qm.forceStartQuest();
 	qm.summonMsg(2);

@@ -206,7 +206,7 @@ function action(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	cm.sendNext("Scrolls are always regarded as the important aspect of Mapler's equipment upgrade process. Are you one of those who strive for achieving perfection in the crafted material?#b\r\n#L0#Create a 65% Scroll#l\r\n#L1#Create a 15% scroll#l#k");
+	cm.sendSimple("Scrolls are always regarded as the important aspect of Mapler's equipment upgrade process. Are you one of those who strive for achieving perfection in the crafted material?#b\r\n#L0#Create a 65% Scroll#l\r\n#L1#Create a 15% scroll#l#k");
     } else if (status == 1) {
 	firstSel = selection;
 	cm.sendYesNo("Oh, hey there. You seems to be more interested than I do. I can always upgrade your scrolls with a little fee and some materials. Are you sure you want to do that? #bThere is a 10% chance that the scroll might be destroyed in the process of the creation.#k")

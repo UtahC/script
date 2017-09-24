@@ -20,7 +20,7 @@ function start(mode, type, selection) {
     } else if (status == 1) {
 	qm.sendNextPrevS("#bHm... So you're not a herbivore. You might be a carnivore. You're a Dragon, after all. How does some Pork sound?#k", 2);
     } else if (status == 2) {
-	qm.askAcceptDecline("What's a...Pork? Never heard of it, but if it's yummy, I accept! Just feed me something tasty. Anything but plants!");
+	qm.sendAcceptDecline("What's a...Pork? Never heard of it, but if it's yummy, I accept! Just feed me something tasty. Anything but plants!");
     } else if (status == 3) {
 	qm.forceStartQuest();
 	qm.sendOkS("#b(Try giving Mir some Pork. You have to hunt a few Pigs at the farm. Ten should be plenty...)#k", 2);

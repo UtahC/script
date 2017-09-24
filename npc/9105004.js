@@ -60,7 +60,7 @@ function action(mode, type, selection) {
 			}	
 			if (next && size >= 2) {
 		    		if (em.getInstance("Christmas" + s) == null) {
-					em.startInstance_Party("" + s, cm.getPlayer());
+					em.startInstanceParty("" + s, cm.getPlayer());
 		    		} else {
 					cm.sendOk("Another party quest has already entered this channel.");
 		    		}

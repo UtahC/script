@@ -26,7 +26,7 @@ function action(mode, type, selection) {
     } else if (status == 1) {
 	cm.sendYesNo("你想體驗一下弓箭手的感覺嗎？");
     } else if (status == 2) {
-	cm.MovieClipIntroUI(true);
+	cm.movieClipIntroUI(true);
 	cm.warp(1020300, 0); // Effect/Direction3.img/archer/Scene00
 	cm.dispose();
     }

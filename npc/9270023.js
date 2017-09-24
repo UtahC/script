@@ -29,14 +29,14 @@ function action(mode, type, selection) {
 	cm.dispose();
     } else if (selection == 2) {
 	facenew = Array();
-	if (cm.getChar().getGender() == 0) {
+	if (cm.getPlayer().getGender() == 0) {
 	    for(var i = 0; i < mface.length; i++) {
-		facenew.push(mface[i] + cm.getChar().getFace() % 1000 - (cm.getChar().getFace() % 100));
+		facenew.push(mface[i] + cm.getPlayer().getFace() % 1000 - (cm.getPlayer().getFace() % 100));
 	    }
 	}
-	if (cm.getChar().getGender() == 1) {
+	if (cm.getPlayer().getGender() == 1) {
 	    for(var i = 0; i < fface.length; i++) {
-		facenew.push(fface[i] + cm.getChar().getFace() % 1000 - (cm.getChar().getFace() % 100));
+		facenew.push(fface[i] + cm.getPlayer().getFace() % 1000 - (cm.getPlayer().getFace() % 100));
 	    }
 	}
 	cm.sendYesNo("If you use the regular coupon, your face may transform into a random new look...do you still want to do it using #b#t5152037##k?");

@@ -12,7 +12,7 @@ function start(mode, type, selection) {
 	status--
     }
     if (status == 0) {
-	qm.askAcceptDecline("Wait, where's the kid? Oh no, he must be stuck in the forest! We need to bring the kid back here before the ark leaves! Aran... please go in there and find the kid for me! I know it's a lot to ask considering you're injured... but you're our only hope!");
+	qm.sendAcceptDecline("Wait, where's the kid? Oh no, he must be stuck in the forest! We need to bring the kid back here before the ark leaves! Aran... please go in there and find the kid for me! I know it's a lot to ask considering you're injured... but you're our only hope!");
     } else if (status == 1) {
 	qm.forceStartQuest(21000); // Idk what data lol..
 	qm.forceStartQuest(21000); // Twice, intended..
@@ -22,7 +22,7 @@ function start(mode, type, selection) {
     } else if (status == 2) {
 	qm.sendNextPrev("Please rescue the kid from the forest, Aran! We cannot afford any more casualties at the hands of the Black Wizard!");
     } else if (status == 3) {
-	qm.AranTutInstructionalBubble("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialArrow1");
+	qm.aranTutInstructionalBubble("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialArrow1");
 	qm.dispose();
     }
 }

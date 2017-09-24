@@ -73,7 +73,7 @@ function action(mode, type, selection) {
 				} else if (gs2.getAllianceId() > 0) {
 					cm.sendOk("Your party member is already affiliated with a guild union.");
 					cm.dispose();
-				} else if (cm.partyMembersInMap() < 2) {
+				} else if (cm.getPartyMembersInMap() < 2) {
 					cm.sendOk("Get your other party member on the same map please.");
 					cm.dispose();
 				} else

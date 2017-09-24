@@ -21,7 +21,7 @@ function start(mode, type, selection) {
     } else if (status == 1) {
 	qm.sendNextPrev("You earn Skill Points every time you level up, which means you probably have a few saved up already. Press the #bK key#k to see your skills. Invest your Skill Points in the skill you wish to strengthen and don't forget to #bplace the skill in a Quick Slot for easy use#k.");
     } else if (status == 2) {
-	qm.askAcceptDecline("Time to practice before you forget. You will find a lot of #o100121#s in this area. Why don't you hunt #r3 #o100121#s#k using your #bThree Snails#b skill and bring me 1 #b#t4000483##k as proof? I'll wait for you here.");
+	qm.sendAcceptDecline("Time to practice before you forget. You will find a lot of #o100121#s in this area. Why don't you hunt #r3 #o100121#s#k using your #bThree Snails#b skill and bring me 1 #b#t4000483##k as proof? I'll wait for you here.");
     } else if (status == 3) {
 	qm.forceStartQuest();
 	qm.summonMsg(8);

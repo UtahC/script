@@ -67,7 +67,7 @@ function action(mode, type, selection) {
 	    if (cm.isLeader())
 		eim.disbandParty();
 	    else
-		eim.leftParty(cm.getChar());
+		eim.leftParty(cm.getPlayer());
 	} else {
 		cm.warp(280090000, 0);
 	}

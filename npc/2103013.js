@@ -94,7 +94,7 @@ function action(mode, type, selection) {
 				}
 			}
 			if (cont_ && cm.isLeader()) {//todo
-				if (!cm.start_PyramidSubway(selection)) {
+				if (!cm.startPyramidSubway(selection)) {
 					cm.sendOk("The pyramid is currently full at the moment.");
 				}
 			} else if (cont_ && !cm.isLeader()) {
@@ -105,7 +105,7 @@ function action(mode, type, selection) {
 			if (!cm.haveItem(itemid,1)) {
 				cm.sendOk("You do not have the item.");
 			} else {
-				if (cm.bonus_PyramidSubway(selection)) {
+				if (cm.bonusPyramidSubway(selection)) {
 					cm.gainItem(itemid, -1);
 				} else {
 					cm.sendOk("The pyramid is currently full at the moment");

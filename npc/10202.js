@@ -26,7 +26,7 @@ function action(mode, type, selection) {
     } else if (status == 1) {
 	cm.sendYesNo("你想體驗一下劍士看看嗎？");
     } else if (status == 2) {
-	cm.MovieClipIntroUI(true);
+	cm.movieClipIntroUI(true);
 	cm.warp(1020100, 0); // Effect/Direction3.img/swordman/Scene00
 	cm.dispose();
     }

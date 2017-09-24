@@ -16,7 +16,7 @@ function start(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	qm.askAcceptDecline("Forget about the Cunning Foxes. Since you're here, want to help me out again? I think the only way to calm the Pigs is by disciplining them. Why don't you go take care of a few of the #rPigs#k?");
+	qm.sendAcceptDecline("Forget about the Cunning Foxes. Since you're here, want to help me out again? I think the only way to calm the Pigs is by disciplining them. Why don't you go take care of a few of the #rPigs#k?");
     } else if (status == 1) {
 	qm.forceStartQuest();
 	qm.sendOk("The crazy pigs can be found staring at the #bHuge Path#k. Head over and take care of just #r20#k of them. Hey, kiddo, you've really become a huge help to me.");
