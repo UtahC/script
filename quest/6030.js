@@ -28,26 +28,12 @@
 var status = -1;
 
 function end(mode, type, selection) {
-  if (mode === -1) {
-    qm.dispose();
-  } else {
-    if (mode === 1) {
-      status++;
-    } else {
-      status--;
-    }
+  var info = qm.getQuestInfo(6029);
 
-    if (status === 0) {
-      var info = qm.getQuestCustomData(6029);
+  info = '1' + info.substr(1, 2);
 
-      info = '1' + info.substr(1, 2);
-
-      qm.setQuestCustomData(6029, info);
-      qm.forceCompleteQuest();
-      qm.sendOk('卡森的煉金術課程。');
-      qm.dispose();
-    } else {
-      qm.dispose();
-    }
-  }
+  qm.setQuestInfo(6029, info);
+  qm.forceCompleteQuest();
+  qm.sendOk('卡森的煉金術課程。');
+  qm.dispose();
 }

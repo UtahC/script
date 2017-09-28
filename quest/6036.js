@@ -28,31 +28,18 @@
 var status = -1;
 
 function end(mode, type, selection) {
-  if (mode === -1) {
-    qm.dispose();
-  } else {
-    if (mode === 1) {
-      status++;
-    } else {
-      status--;
-    }
+  var skillId = 1007;
 
-    if (status === 0) {
-      var skillId = 1007;
-
-      if (qm.getJob() >= 1100 && qm.getJob() <= 1512) {
-        skillId = 10001007;
-      } else if (qm.getJob() >= 2100 && qm.getJob() <= 2112) {
-        skillId = 20001007;
-      }
-
-      qm.teachSkill(skillId, 3);
-      qm.gainExp(960000);
-      qm.forceCompleteQuest();
-      qm.sendOk('啊！你！你真的強化合成出來了！這就是我想要強化合成的黃金鐵砧！！把這個給我可以嗎？\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n#s1007# #q1007#（等級3）\r\n#fUI/UIWindow.img/QuestIcon/8/0# 960000 exp');
-      qm.dispose();
-    } else {
-      qm.dispose();
-    }
+  if (qm.getJob() >= 1100 && qm.getJob() <= 1512) {
+    skillId = 10001007;
+  } else if (qm.getJob() >= 2100 && qm.getJob() <= 2112) {
+    skillId = 20001007;
   }
+
+  qm.gainItem(4031980, -1);
+  qm.teachSkill(skillId, 3);
+  qm.gainExp(960000);
+  qm.forceCompleteQuest();
+  qm.sendOk('啊！你！你真的強化合成出來了！這就是我想要強化合成的黃金鐵砧！！把這個給我可以嗎？\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n#s1007# #q1007#（等級3）\r\n#fUI/UIWindow.img/QuestIcon/8/0# 960000 exp');
+  qm.dispose();
 }
