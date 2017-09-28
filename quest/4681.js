@@ -21,7 +21,7 @@ function start(mode, type, selection) {
     }
     switch (status) {
 	case 0:
-	    if (qm.getQuestCustomData() != null) { // if (qm.getQuestCustomData().equals("readHistory")) {
+	    if (qm.getQuestInfo() != null) { // if (qm.getQuestInfo().equals("readHistory")) {
 		qm.sendSimple("Good to see you back, Mapler. How did you fare against the goblin? #b \n\r #L0#I was able to defeat the monster of Ninja Castle!#l \n\r #L1#No, I wasn't able to.#l");
 		status = 99;
 	    } else {
@@ -150,7 +150,7 @@ function start(mode, type, selection) {
 	    break;
 	case 41:
 	    //	    qm.forceStartQuest();
-	    qm.setQuestCustomData("readHistory");
+	    qm.setQuestInfo("readHistory");
 	    qm.sendNextPrev("Thank you, Mapler... thank you...#p9120025# breathes a heavy sigh of relief)");
 	    break;
 	case 42:
