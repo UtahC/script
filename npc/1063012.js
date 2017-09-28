@@ -7,7 +7,7 @@ function action(mode, type, selection) {
     return cm.dispose();
   }
 
-  var data = cm.getQuestCustomData(2236) || '000000';
+  var data = cm.getQuestInfo(2236);
   var index;
   var mapId = cm.getMap().getId();
   var maps = {
@@ -28,7 +28,7 @@ function action(mode, type, selection) {
 
   if ('0' === data.charAt(index)) {
     cm.gainItem(4032263, -1);
-    cm.setQuestCustomData(2236, data.substr(0, index) + '1' + data.substr(index + 1));
+    cm.setQuestInfo(2236, data.substr(0, index) + '1' + data.substr(index + 1));
   }
 
   cm.dispose();
