@@ -31,8 +31,7 @@ function start() {
   scheduleNew();
 
   var messages = [
-    "如果有任何卡住、無法動彈，請使用 @ea",
-    "道館、組隊任務皆能獲得商城點數"
+    "如果有任何卡住、無法動彈，請使用 @ea"
   ];
 
   em.getChannelServer().broadcastPacket(MaplePacketCreator.yellowChat("[楓之谷幫助]" + messages[counter % messages.length]));
