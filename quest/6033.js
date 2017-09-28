@@ -29,7 +29,7 @@ var status = -1;
 
 function end(mode, type, selection) {
   if (mode === -1) {
-    qm.safeDispose();
+    qm.dispose();
   } else {
     if (mode === 1) {
       status++;
@@ -50,9 +50,9 @@ function end(mode, type, selection) {
       qm.gainExp(230000);
       qm.forceCompleteQuest();
       qm.sendOk('好吧。雖然不是很滿意，就讓你通過了吧！！以後一定要注意改進啊！\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n#s1007# #q1007#（等級2）\r\n#fUI/UIWindow.img/QuestIcon/8/0# 230000 exp');
-      qm.safeDispose();
+      qm.dispose();
     } else {
-      qm.safeDispose();
+      qm.dispose();
     }
   }
 }

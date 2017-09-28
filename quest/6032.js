@@ -29,7 +29,7 @@ var status = -1;
 
 function end(mode, type, selection) {
   if (mode === -1) {
-    qm.safeDispose();
+    qm.dispose();
   } else {
     if (mode === 1) {
       status++;
@@ -45,9 +45,9 @@ function end(mode, type, selection) {
       qm.setQuestCustomData(6029, info);
       qm.forceCompleteQuest();
       qm.sendOk('史丹的操作課程。');
-      qm.safeDispose();
+      qm.dispose();
     } else {
-      qm.safeDispose();
+      qm.dispose();
     }
   }
 }

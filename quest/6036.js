@@ -29,7 +29,7 @@ var status = -1;
 
 function end(mode, type, selection) {
   if (mode === -1) {
-    qm.safeDispose();
+    qm.dispose();
   } else {
     if (mode === 1) {
       status++;
@@ -50,9 +50,9 @@ function end(mode, type, selection) {
       qm.gainExp(960000);
       qm.forceCompleteQuest();
       qm.sendOk('啊！你！你真的強化合成出來了！這就是我想要強化合成的黃金鐵砧！！把這個給我可以嗎？\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n#s1007# #q1007#（等級3）\r\n#fUI/UIWindow.img/QuestIcon/8/0# 960000 exp');
-      qm.safeDispose();
+      qm.dispose();
     } else {
-      qm.safeDispose();
+      qm.dispose();
     }
   }
 }
