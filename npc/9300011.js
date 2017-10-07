@@ -2,7 +2,7 @@ var points;
 
 function start() {
     var record = cm.getQuestRecord(150001);
-    points = record.getCustomData() == null ? "0" : record.getCustomData();
+    points = record.getData() == null ? "0" : record.getData();
     cm.sendSimple("你要挑戰BOSS?\n\r\n\r #b#L3#查看點數#l#k \r\n\r\n #b#L0# #v03994115##l #L1# #v03994116##l #L2# #v03994117##l #L28# #v03994118##l");
 }
 
